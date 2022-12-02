@@ -1,11 +1,9 @@
+// https://adventofcode.com/2022/day/1
+
 const fs = require("fs");
 
-// const input = fs.readFileSync("demo_input.txt", "utf8");
 const input = fs.readFileSync("input.txt", "utf8");
-// console.log(input);
-
 const inputLines = [...input.split("\r\n"), ""];
-// console.log(inputLines);
 
 let currentTotal = 0;
 let maxTotals = [0, 0, 0];
@@ -30,6 +28,4 @@ for (let i = 0; i < maxTotals.length; i++) {
     maxTotalsSum += maxTotals[i];
 }
 
-// console.log(currentTotal, maxTotals, maxTotalsSum);
-
-console.log(maxTotalsSum); // 197301
+console.log(maxTotalsSum);
