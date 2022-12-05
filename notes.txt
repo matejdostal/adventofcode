@@ -1,1 +1,2 @@
-npx tsc 2022/day_01/01.ts && node 2022/day_01/01.js && rm 2022/day_01/01.js
+
+> npm start 2022/01/01
