@@ -1,14 +1,14 @@
 // https://adventofcode.com/2022/day/2
 
-const fs = require("fs");
-const path = require("path");
+import * as fs from "fs";
+import * as path from "path";
 
 const input = fs.readFileSync(path.join(__dirname, "input.txt"), "utf8");
 const inputLines = input.split("\r\n");
 
 let totalScore = 0;
 
-const scoreMap = {
+const scoreMap: any = {
     "A X": 3 + 0,
     "A Y": 1 + 3,
     "A Z": 2 + 6,
@@ -25,5 +25,3 @@ for (let i = 0; i < inputLines.length; i++) {
 }
 
 console.log(totalScore);
-
-export {};

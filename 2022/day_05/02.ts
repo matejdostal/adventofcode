@@ -1,7 +1,7 @@
 // https://adventofcode.com/2022/day/5
 
-const fs = require("fs");
-const path = require("path");
+import * as fs from "fs";
+import * as path from "path";
 
 const input = fs.readFileSync(path.join(__dirname, "input.txt"), "utf8");
 
@@ -41,5 +41,3 @@ for (let i = 0; i < stacks.length; i++) {
 }
 
 console.log(result);
-
-export {};
