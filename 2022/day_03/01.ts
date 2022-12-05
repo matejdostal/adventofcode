@@ -1,8 +1,9 @@
 // https://adventofcode.com/2022/day/3
 
 const fs = require("fs");
+const path = require("path");
 
-const input = fs.readFileSync("input.txt", "utf8");
+const input = fs.readFileSync(path.join(__dirname, "input.txt"), "utf8");
 const inputLines = input.split("\r\n");
 
 const priorities = {};
@@ -41,3 +42,5 @@ for (let i = 0; i < inputLines.length; i++) {
 }
 
 console.log(sumOfPriorities);
+
+export {};
