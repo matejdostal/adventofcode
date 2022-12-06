@@ -8,10 +8,11 @@ const input = fs.readFileSync(path.join(__dirname, "input.txt"), "utf8");
 const LENGTH_OF_MESSAGE_MARKER = 14;
 let result = -1;
 
-for (let i = LENGTH_OF_MESSAGE_MARKER; i < input.length; i++) {
-    let set = new Set(input.substring(i - LENGTH_OF_MESSAGE_MARKER, i).split(""));
+for (let i = LENGTH_OF_MESSAGE_MARKER - 1; i < input.length; i++) {
+    let position = i + 1;
+    let set = new Set(input.substring(position - LENGTH_OF_MESSAGE_MARKER, position).split(""));
     if (set.size === LENGTH_OF_MESSAGE_MARKER) {
-        result = i;
+        result = position;
         break;
     }
 }
